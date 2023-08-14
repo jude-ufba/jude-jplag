@@ -58,7 +58,7 @@ def detect_plagiarism():
         for submission in submissions:
             # Save the submission to a temporary file
             # submission_path: str = f"{temp_dir}/{submission['id']}.{extension}"
-            submission_path = os.path.join(temp_dir, f"code{submission['id']}.{extension}")
+            submission_path = os.path.join(temp_dir, f"{submission['id']}.{extension}")
             with open(submission_path, 'wb') as file:
                 # Decode the submission from base64
                 file.write(base64.b64decode(submission['code']))
